@@ -1,0 +1,31 @@
+{
+  "name": "nitro-extends-routing",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "playground:dev": "nitro dev --port 8813",
+    "playground:prepare": "nitro prepare",
+    "playground:preview": "node .output/server/index.mjs",
+    "build": "pkgroll --clean-dist --minify"
+  },
+  "devDependencies": {
+    "layer-a": "./layers/A",
+    "nitropack": "latest",
+    "pkgroll": "^2.8.2",
+    "typescript": "^5.7.3"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    "require": {
+      "types": "./dist/index.d.cts",
+      "default": "./dist/index.cjs"
+    },
+    "import": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e"
+}
