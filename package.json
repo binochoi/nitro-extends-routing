@@ -6,13 +6,13 @@
     "playground:dev": "nitro dev --port 8813",
     "playground:prepare": "nitro prepare",
     "playground:preview": "node .output/server/index.mjs",
-    "build": "pkgroll --clean-dist --minify"
+    "build": "unbuild && npx pkg-to-dist"
   },
   "devDependencies": {
     "layer-a": "./layers/A",
     "nitropack": "latest",
-    "pkgroll": "^2.8.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "unbuild": "^3.3.1"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",

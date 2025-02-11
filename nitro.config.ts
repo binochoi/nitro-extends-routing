@@ -11,5 +11,5 @@ export default defineNitroConfig({
         skipLibCheck: true,
       }
     }
-  }
+  },
 });
