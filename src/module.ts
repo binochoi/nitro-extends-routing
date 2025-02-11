@@ -12,7 +12,7 @@ const getRoutePath = (path: string, routesDir = 'routes') => {
 export const extendsRouting = ({ routePath, prefix = '' }: ModuleOptions) => ({
     name: "extendsRouting",
     async setup(nitro) {
-        const routeFullPath = path.resolve(__dirname, routePath);
+        const routeFullPath = path.resolve(path.resolve(), routePath);
         const routes = (await scanServerRoutes(nitro, routeFullPath)).map((handler) => ({
             ...handler,
             middleware: false,
