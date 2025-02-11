@@ -1,7 +1,7 @@
 {
   "name": "nitro-extends-routing",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "scripts": {
     "playground:dev": "nitro dev --port 8813",
     "playground:prepare": "nitro prepare",
